@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+}
+
+.cabecalho {
+    background: linear-gradient(45deg, white, #ff7a09 );
+    padding: 15px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;    
+    margin-top: 5px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: bold;
+    color: black;
+    margin-right: 15px;
+    font-family: cursive;
+    border: 1px solid #ff7a09;
+    padding: 5px;
+    background: #ff7a09bd;
+    padding-inline: 20px;
+}
