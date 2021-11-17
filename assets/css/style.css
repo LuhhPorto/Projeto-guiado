@@ -1,5 +1,7 @@
 body {
     margin: 0px;
+    font-family: cursive;
+
 }
 
 .cabecalho {
@@ -11,6 +13,7 @@ body {
     display: flex;
     justify-content: center;    
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .menu a {
@@ -24,3 +27,4 @@ body {
     background: #ff7a09bd;
     padding-inline: 20px;
 }
+

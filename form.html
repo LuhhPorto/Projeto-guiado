@@ -5,17 +5,43 @@
             Projeto Guiado
         </title>
         <link rel="stylesheet" href="./assets/css/style.css" /> <!-- Esta puxando o meu css-->
+        <link rel="stylesheet" href="./assets/css/lista.css" />
+        <link rel="stylesheet" href="./assets/css/form.css" />
     </head>
 
     <body> 
         <header class="cabecalho"> <!-- Feito cabeçalho do site -->
-            <img src="./assets/img/logo.jpg" />
-       </header>
-       <div class="menu"> <!--Menu para listagem e cadastrar-->
-            <a href="./index.html" > Listagem </a>
-            <a href="./form.html" > Cadastrar </a>
-       </div>
-    <body> 
+                <img src="./assets/img/logo.jpg" />
+        </header>
+            <div class="menu"> <!--Menu para listagem e cadastrar-->
+                <a href="./index.html" > Listagem </a>
+                <a href="./form.html" > Cadastrar </a>
+            </div>
+
+        <Section>
+            <div>
+                <Form class="form-cadastro">
+                    <div class="nome">
+                        <label for="nome">Nome:</label>
+                        <input type="nome" id="nome" required type="text" />
+                    </div>
+                    <div class="telefone">
+                        <label for="tel">Telefone:</label> 
+                        <input type="tel" id="tel" required type="text" />
+                    </div>
+                    <div class="experiencia">
+                        <label>Experiencia Prévia:</label> 
+                        <input type="radio" name="xp"  id="xp-yes" /> <label for="xp-yes"> Sim </label>
+
+                        <input type="radio" name="xp"  id="xp-no" /> <label for="xp-no"> Não </label>
+                    </div>
+                    <div>
+                        <input type="submit" value="Salvar"/>
+                    </div>
+                    
+                </Form>
+            </div>
+        </Section>
       
     </body>
 
