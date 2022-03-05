@@ -14,13 +14,13 @@
                 <img src="./assets/img/logo.jpg" />
         </header>
             <div class="menu"> <!--Menu para listagem e cadastrar-->
-                <a href="./index.html" > Listagem </a>
+                <a id="goHome" href="./index.html" > Listagem </a>
                 <a href="./form.html" > Cadastrar </a>
             </div>
 
         <Section>
             <div>
-                <Form class="form-cadastro">
+                <Form class="form-cadastro" onsubmit="testarformulario(event);">
                     <div class="nome">
                         <label for="nome">Nome:</label>
                         <input type="nome" id="nome" required type="text" />
@@ -31,9 +31,9 @@
                     </div> 
                     <div class="experiencia">
                         <label>Experiencia Prévia:</label> 
-                        <input type="radio" name="xp"  id="xp-yes" /> <label for="xp-yes"> Sim </label>
+                        <input type="radio" name="xp"  id="xp-yes" value="true"/> <label for="xp-yes"> Sim </label>
 
-                        <input type="radio" name="xp"  id="xp-no" /> <label for="xp-no"> Não </label>
+                        <input type="radio" name="xp"  id="xp-no" value="false"/> <label for="xp-no"> Não </label>
                     </div> 
                     <div class="salvar">
                         <input type="submit" value="Salvar"/>
@@ -42,6 +42,8 @@
                 </Form>
             </div>
         </Section>
+
+        <script src="./assets/js/form.js" ></script>
       
     </body>
 
