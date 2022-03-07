@@ -1,14 +1,20 @@
 function testarformulario(e) {
     e.preventDefault();
 
-    for (i in e.target.elements['tel'].value) {
-        if ('0123456789'.indexOf(e.target.elements['tel'].value[i]) == -1) {
-            alert('Apenas números são permitidos no campo telefone!')
-            return false
-        }
+  //  for (i in e.target.elements['tel'].value) {
+  //      if ('0123456789'.indexOf(e.target.elements['tel'].value[i]) == -1) {
+  //         alert('Apenas números são permitidos no campo telefone!')
+  //          return false
+  //      }
+  //  }
+
+  var telefonepadrao = /[^0-9-() ]+/g
+    if (telefonepadrao.test(e.target.elements['tel'].value)) {
+        alert('Apenas números são permitidos no campo telefone!')
+        return false
     }
 
-    if (e.target.elements['tel'].value.length < 11) {
+    if (e.target.elements['tel'].value.replace(/[-() ]/g, '').length < 11) {
         alert ('Número inválido!')
         return false
     }
@@ -60,4 +66,25 @@ if (people[id].xp) {
     document.getElementById('xp-no').checked = true
 }
 
+}
+
+function testacampotel(e) {
+    e.preventDefault()
+    console.log(e)
+
+    if (e.target.value.length == '0') {
+        e.target.value += '('
+    }
+    
+    if (e.target.value.length == '3') {
+        e.target.value += ') '
+    }
+
+    if (e.target.value.length == '10') {
+        e.target.value += '-'
+    }
+
+    if ((/[0-9]/g).test(e.key) && e.target.value.length < 15) {
+        e.target.value += e.key
+    }
 }

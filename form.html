@@ -27,7 +27,7 @@
                     </div> 
                     <div class="telefone">
                         <label for="tel">Telefone:</label> 
-                        <input type="tel" id="tel" required type="text" />
+                        <input type="tel" id="tel" onkeypress="testacampotel(event)" onfocus="this.value = ''" required type="text" />
                     </div> 
                     <div class="experiencia">
                         <label>Experiencia Prévia:</label> 
